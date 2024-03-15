@@ -105,3 +105,7 @@ interface Endorser {
 ```
 
 > **Note**: The endorser interface also defines a `simulationSettings` method, which is optional.
+
+### Endorser role
+
+The role of the endorser is simple, it serves as a companion to the operation, it can provide the mempool nodes with the information they may need to validate and process the operation. They do this mainly using the `isOperationReady` method, which returns a boolean indicating if the operation is ready to be executed, and a list of dependencies that the operation may have.
